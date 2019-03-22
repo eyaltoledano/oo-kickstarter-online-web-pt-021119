@@ -8,6 +8,6 @@ class Project
   end
 
   def add_backer(backer)
-    binding.pry
+    self.backers << backer
   end
 end
