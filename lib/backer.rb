@@ -1,3 +1,5 @@
+require 'pry'
+
 class Backer
   attr_accessor :name, :backed_projects, :project
 
@@ -8,6 +10,7 @@ class Backer
 
   def back_project(project)
     project = Project.new(project)
+    binding.pry
     project.backers << self
     self.backed_projects << project
   end
